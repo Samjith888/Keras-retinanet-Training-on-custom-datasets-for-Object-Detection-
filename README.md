@@ -76,8 +76,10 @@ Run the following command.
  Also detecting from image is done by run the following command.
  
    `python people_detection_image.py`
+   
  
-
+ 
+ ![detected_image](https://user-images.githubusercontent.com/39676803/65708379-4e252a80-e043-11e9-8791-61f7a6d135f3.jpg)
 
 
 		 
