@@ -10,15 +10,16 @@ Install keras-retinanet. It can be done in two ways:
 Note : Make sure that tensorflow is installed in the machine
 		
 ## Prepare Data for training	
-1. Clone or download this repository 
-2. Paste all training images in dataset/images directory.
-3. Next step is to create annotation file for each images and place all annotation xml files in dataset/annotations 
+1. Clone or download this repository.
+2. Delete files inside snapshot,tensorboard,dataset/annotation and dataset/images in this directory. 
+3. Paste all training images in dataset/images directory.
+4. Next step is to create annotation file for each images and place all annotation xml files in dataset/annotations 
    directory. Which will be in xml format. LabelImg is one of the tool which can be used for annotation. 
 	 [LabelImg github](https://github.com/tzutalin/labelImg) or [LabelImg exe](https://tzutalin.github.io/labelImg/)
-4. Then have to set the config file custom_dataset_config.py inside config directory.
+5. Then have to set the config file custom_dataset_config.py inside config directory.
    Here set the path for annotation, image, train.csv files and also set the path where the classes.csv have to be 
 	 saved. TRAIN_TEST_SPLIT value will split the data for training and testing.
-5. create train.csv, test.csv and classes.csv by using build_dataset.py inside this directory.
+6. create train.csv, test.csv and classes.csv by using build_dataset.py inside this directory.
     Run the following command inside the directory
 		
 		`python build_dataset.py`
