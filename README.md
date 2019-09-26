@@ -44,7 +44,8 @@ Start training by run the following one of the command.
 or 
 	`python keras_retinanet/bin/train.py --weights resnet50_coco_best_v2.1.0.h5 --steps 400 --epochs 20 
 	--snapshot-path snapshots --tensorboard-dir tensorboard csv dataset/train.csv dataset/classes.csv`
-	
+
+
 ![t1](https://user-images.githubusercontent.com/39676803/65702299-9e968b00-e037-11e9-9ce6-0809b6f329e8.JPG)	
 	
 The After each epoch the model will be saved in the snapshots folder. Stop the training by using 'ctr+c' when the loss will be lesser like in a range 0.1. 
@@ -57,6 +58,7 @@ The model have to be converted in a format which can be used for prediction. For
 
    `$ retinanet-convert-model <path/to/desired/snapshot.h5> <path/to/output/model.h5>`
 or
+
    `$ python keras_retinanet/bin/train.py <path/to/desired/snapshot.h5> <path/to/output/model.h5>`
 	 
 Note : If you set any anchor params (--config) during training, then you should pass it to the above command while model convertion. (eg : retinanet-convert-model <path/to/desired/snapshot.h5> <path/to/output/model.h5> --config config.ini).
