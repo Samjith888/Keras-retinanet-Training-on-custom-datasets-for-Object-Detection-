@@ -2,8 +2,8 @@
 from PIL import Image
 import os
 
-path = "C:\\Users\\Samjith.CP\\Desktop\\terrorist_detect\\dataset\\images\\"
-output= "C:\\Users\\Samjith.CP\\Desktop\\terrorist_detect\\dataset\\"
+path = "C:\\Users\\Samjith.CP\\Desktop\\tt\\dataset\\images\\"
+output= "C:\\Users\\Samjith.CP\\Desktop\\tt\\dataset\\"
 
 
 def resize():
