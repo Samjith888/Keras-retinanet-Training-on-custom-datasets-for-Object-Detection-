@@ -49,7 +49,7 @@ or
 
 ![t1](https://user-images.githubusercontent.com/39676803/65702299-9e968b00-e037-11e9-9ce6-0809b6f329e8.JPG)	
 	
-The After each epoch the model will be saved in the snapshots folder. Stop the training by using 'ctr+c' when the loss will be lesser like in a range 0.1. 
+After each epoch, the model will be saved in the snapshots folder. Stop the training by using 'ctr+c' when the loss will be lesser like in a range 0.1. 
 
 
 
