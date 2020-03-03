@@ -8,7 +8,7 @@ Install keras-retinanet. It can be done in two ways:
 	pip install keras-retinanet 		
 		
 Note : Make sure that tensorflow is installed in the machine (tensorflow version < 2.0)
-python <=3.7
+       ,python <=3.7
 		
 ## Prepare Data for training	
 1. Clone or download this repository.
