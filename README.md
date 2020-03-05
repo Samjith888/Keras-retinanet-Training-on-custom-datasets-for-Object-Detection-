@@ -61,7 +61,7 @@ The model have to be converted in a format which can be used for prediction. For
    `$ retinanet-convert-model <path/to/desired/snapshot.h5> <path/to/output/model.h5>`
 or
 
-   `$ python keras_retinanet/bin/train.py <path/to/desired/snapshot.h5> <path/to/output/model.h5>`
+   `$ python keras_retinanet/bin/convert_model.py <path/to/desired/snapshot.h5> <path/to/output/model.h5>`
 	 
 Note : If you set any anchor params (--config) during training, then you should pass it to the above command while model convertion. (eg : retinanet-convert-model <path/to/desired/snapshot.h5> <path/to/output/model.h5> --config config.ini).
 Refer the 53 line (parser.add_argument('--config', help='Path to a configuration parameters .ini file.')) in keras-retinanet/bin/convert_model.py
