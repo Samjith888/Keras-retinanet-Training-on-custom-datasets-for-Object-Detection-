@@ -1,13 +1,13 @@
 # Keras-retinanet-Training-on-custom-datasets-for-Object-Detection-
 
 ## Prerequisites
-Install keras-retinanet. It can be done in two ways:
-
-    By using Fizyr keras-retinanet github repository. https://github.com/fizyr/keras-retinanet 
-		                                    (or)
-	pip install keras-retinanet 		
+1. Clone this repository.
+2. Ensure numpy is installed using pip install numpy --user
+3. In the repository, execute pip install . --user. Note that due to inconsistencies with how tensorflow should be installed, this package does not define a dependency on tensorflow as it will try to install that (which at least on Arch Linux results in an incorrect installation). Please make sure tensorflow is installed as per your systems requirements.
+4. Alternatively, you can run the code directly from the cloned repository, however you need to run python setup.py build_ext --inplace to compile Cython code first.
+5. Optionally, install pycocotools if you want to train / test on the MS COCO dataset by running pip install --user git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI.
 		
-Note : Make sure that tensorflow is installed in the machine (tensorflow version < 2.0)
+  Note : Make sure that tensorflow is installed on the machine (tensorflow version < 2.0)
        ,python <=3.7
 		
 ## Prepare Data for training	
@@ -41,11 +41,12 @@ Download the pretrained weights on the COCO datasets with resnet50 backbone from
 Start training by run the following one of the command. 
 
    `$ retinanet-train --weights resnet50_coco_best_v2.1.0.h5 --steps 400 --epochs 20 --snapshot-path snapshots 
-	 --tensorboard-dir tensorboard csv dataset/train.csv dataset/classes.csv`
+	 --tensorboard-dir tensorboard csv dataset/train.csv dataset/classes.csv  --val-annotations dataset/test.csv`
 	 
 or 
 	`python keras_retinanet/bin/train.py --weights resnet50_coco_best_v2.1.0.h5 --steps 400 --epochs 20 
-	--snapshot-path snapshots --tensorboard-dir tensorboard csv dataset/train.csv dataset/classes.csv`
+	--snapshot-path snapshots --tensorboard-dir tensorboard csv dataset/train.csv dataset/classes.csv  
+  --val-annotations dataset/test.csv`
 
 
 ![t1](https://user-images.githubusercontent.com/39676803/65702299-9e968b00-e037-11e9-9ce6-0809b6f329e8.JPG)	
